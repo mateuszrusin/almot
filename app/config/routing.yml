@@ -1,0 +1,7 @@
+almot_platform:
+    resource: "@AlmotPlatformBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation

@@ -1,0 +1,7 @@
+parameters:
+#    almot_platform.example.class: Almot\PlatformBundle\Example
+
+services:
+#    almot_platform.example:
+#        class: %almot_platform.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

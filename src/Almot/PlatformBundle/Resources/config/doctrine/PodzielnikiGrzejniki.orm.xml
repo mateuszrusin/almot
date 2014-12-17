@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Almot\PlatformBundle\Entity\PodzielnikiGrzejniki" table="podzielniki_grzejniki">
+    <indexes>
+      <index name="id_podzielnik" columns="id_podzielnik"/>
+      <index name="id_grzejnik" columns="id_grzejnik"/>
+      <index name="id_okres_rozliczeniowy" columns="id_okres_rozliczeniowy"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dataDemontazu" type="date" column="data_demontazu" nullable="false"/>
+    <field name="opis" type="string" column="opis" length="200" nullable="false"/>
+    <many-to-one field="idOkresRozliczeniowy" target-entity="OkresyRozliczeniowe">
+      <join-columns>
+        <join-column name="id_okres_rozliczeniowy" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idGrzejnik" target-entity="Grzejniki">
+      <join-columns>
+        <join-column name="id_grzejnik" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idPodzielnik" target-entity="Podzielniki">
+      <join-columns>
+        <join-column name="id_podzielnik" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

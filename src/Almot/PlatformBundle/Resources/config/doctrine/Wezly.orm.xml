@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Almot\PlatformBundle\Entity\Wezly" table="wezly">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nazwa" type="string" column="nazwa" length="30" nullable="false"/>
+    <field name="ulica" type="string" column="ulica" length="30" nullable="false"/>
+    <field name="kodPocztowy" type="string" column="kod_pocztowy" length="6" nullable="false"/>
+    <field name="misato" type="string" column="misato" length="30" nullable="false"/>
+    <field name="telefon" type="string" column="telefon" length="12" nullable="false"/>
+  </entity>
+</doctrine-mapping>

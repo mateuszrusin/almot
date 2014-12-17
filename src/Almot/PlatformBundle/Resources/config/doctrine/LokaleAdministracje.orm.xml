@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Almot\PlatformBundle\Entity\LokaleAdministracje" table="lokale_administracje">
+    <indexes>
+      <index name="id_administracja" columns="id_administracja"/>
+      <index name="id_budynek" columns="id_lokal"/>
+      <index name="id_okres_rozliczeniowy" columns="id_okres_rozliczeniowy"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idLokal" type="integer" column="id_lokal" nullable="false"/>
+    <field name="idAdministracja" type="integer" column="id_administracja" nullable="false"/>
+    <field name="idOkresRozliczeniowy" type="integer" column="id_okres_rozliczeniowy" nullable="true"/>
+  </entity>
+</doctrine-mapping>
