@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Almot\AppBundle\Entity\RozliczeniaLokatorzy" table="rozliczenia_lokatorzy">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idRozliczenie" type="integer" column="id_rozliczenie" nullable="false"/>
+    <field name="idLokator" type="integer" column="id_lokator" nullable="false"/>
+    <field name="idOkresRozliczeniowy" type="integer" column="id_okres_rozliczeniowy" nullable="true"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Almot\AppBundle\Entity\ZarzadcyAdministracje" table="zarzadcy_administracje">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idZarzadca" type="integer" column="id_zarzadca" nullable="false"/>
+    <field name="idAdministracja" type="integer" column="id_administracja" nullable="false"/>
+    <field name="idOkresRozliczeniowy" type="integer" column="id_okres_rozliczeniowy" nullable="true"/>
+  </entity>
+</doctrine-mapping>

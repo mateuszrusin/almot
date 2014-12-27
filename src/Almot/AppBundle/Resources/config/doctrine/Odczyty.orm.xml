@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Almot\AppBundle\Entity\Odczyty" table="odczyty">
+    <indexes>
+      <index name="id_opis_odczytu" columns="id_opis_odczytu"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="wskazaniaLicznika" type="integer" column="wskazania_licznika" nullable="false"/>
+    <field name="wartoscKontrolna" type="integer" column="wartosc_kontrolna" nullable="false"/>
+    <field name="temperaturaSrednia" type="decimal" column="temperatura_srednia" precision="2" scale="2" nullable="false"/>
+    <field name="dataOdczytu" type="date" column="data_odczytu" nullable="false"/>
+    <field name="odczytSzacowany" type="boolean" column="odczyt_szacowany" nullable="false"/>
+    <field name="jednostkiZredukowane" type="integer" column="jednostki_zredukowane" nullable="false"/>
+    <many-to-one field="idOpisOdczytu" target-entity="OpisyOdczytow">
+      <join-columns>
+        <join-column name="id_opis_odczytu" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

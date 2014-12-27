@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Almot\AppBundle\Entity\Lokale" table="lokale">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idZewnetrzneLokaluDoZaliczek" type="string" column="id_zewnetrzne_lokalu_do_zaliczek" length="30" nullable="false"/>
+    <field name="numerKlatki" type="string" column="numer_klatki" length="5" nullable="false"/>
+    <field name="numerMieszkania" type="string" column="numer_mieszkania" length="5" nullable="false"/>
+    <field name="powierzchnia" type="float" column="powierzchnia" precision="10" scale="0" nullable="false"/>
+    <field name="wspolczynnikWyrownawczy" type="float" column="wspolczynnik_wyrownawczy" precision="10" scale="0" nullable="false"/>
+  </entity>
+</doctrine-mapping>

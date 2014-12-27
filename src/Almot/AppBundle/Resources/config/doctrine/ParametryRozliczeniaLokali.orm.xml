@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Almot\AppBundle\Entity\ParametryRozliczeniaLokali" table="parametry_rozliczenia_lokali">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="wspolczynnikWyrownawczyLokalu" type="float" column="wspolczynnik_wyrownawczy_lokalu" precision="10" scale="0" nullable="false"/>
+    <field name="temperaturaSredniaPomieszczen" type="decimal" column="temperatura_srednia_pomieszczen" precision="2" scale="1" nullable="false"/>
+    <field name="ryczalt" type="boolean" column="ryczalt" nullable="false"/>
+    <field name="uwagi" type="string" column="uwagi" length="200" nullable="false"/>
+  </entity>
+</doctrine-mapping>

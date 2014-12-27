@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Almot\AppBundle\Entity\OkresyRozliczeniowe" table="okresy_rozliczeniowe">
+    <indexes>
+      <index name="id_wezla" columns="id_wezla"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nazwaOkresuRozliczeniowego" type="string" column="nazwa_okresu_rozliczeniowego" length="50" nullable="false"/>
+    <field name="dataPoczatkuRozliczenia" type="date" column="data_poczatku_rozliczenia" nullable="false"/>
+    <field name="dataZakonczeniaRozliczenia" type="date" column="data_zakonczenia_rozliczenia" nullable="false"/>
+    <field name="calkowiteKosztyOgrzewania" type="float" column="calkowite_koszty_ogrzewania" precision="10" scale="0" nullable="false"/>
+    <field name="staleKosztyOgrzewania" type="float" column="stale_koszty_ogrzewania" precision="10" scale="0" nullable="false"/>
+    <field name="zmienneKosztyOgrzewania1" type="float" column="zmienne_koszty_ogrzewania_1" precision="10" scale="0" nullable="false"/>
+    <field name="zmienneKosztyOgrzewania2" type="float" column="zmienne_koszty_ogrzewania_2" precision="10" scale="0" nullable="false"/>
+    <field name="sredniaTemperaturaOtoczenia" type="float" column="srednia_temperatura_otoczenia" precision="10" scale="0" nullable="false"/>
+    <field name="jednostkowyKosztStaly" type="float" column="jednostkowy_koszt_staly" precision="10" scale="0" nullable="false"/>
+    <field name="jednostkowyKosztZmienny1" type="float" column="jednostkowy_koszt_zmienny_1" precision="10" scale="0" nullable="false"/>
+    <field name="jednostkowyKosztZmienny2" type="float" column="jednostkowy_koszt_zmienny_2" precision="10" scale="0" nullable="false"/>
+    <field name="kosztRozliczeniaPodzielnika" type="float" column="koszt_rozliczenia_podzielnika" precision="10" scale="0" nullable="false"/>
+    <field name="flagaRozliczenieZakonczone" type="boolean" column="flaga_rozliczenie_zakonczone" nullable="false"/>
+    <many-to-one field="idWezla" target-entity="Wezly">
+      <join-columns>
+        <join-column name="id_wezla" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

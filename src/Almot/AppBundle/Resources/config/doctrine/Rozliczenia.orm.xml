@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Almot\AppBundle\Entity\Rozliczenia" table="rozliczenia">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="prognozowanaKwotaZaliczki" type="float" column="prognozowana_kwota_zaliczki" precision="10" scale="0" nullable="false"/>
+    <field name="zaliczka" type="float" column="zaliczka" precision="10" scale="0" nullable="false"/>
+    <field name="kosztStalyLokalu" type="float" column="koszt_staly_lokalu" precision="10" scale="0" nullable="false"/>
+    <field name="kosztZmiennyJednen" type="float" column="koszt_zmienny_jednen" precision="10" scale="0" nullable="false"/>
+    <field name="kosztZmiennyDwa" type="float" column="koszt_zmienny_dwa" precision="10" scale="0" nullable="false"/>
+    <field name="kosztRozliczeniaPodzielnika" type="float" column="koszt_rozliczenia_podzielnika" precision="10" scale="0" nullable="false"/>
+    <field name="kosztSpecjalny" type="float" column="koszt_specjalny" precision="10" scale="0" nullable="false"/>
+    <field name="idOpisuKosztuSpecjalnego" type="integer" column="id_opisu_kosztu_specjalnego" nullable="false"/>
+    <field name="nadplataNiedoplata" type="float" column="nadplata_niedoplata" precision="10" scale="0" nullable="false"/>
+  </entity>
+</doctrine-mapping>
