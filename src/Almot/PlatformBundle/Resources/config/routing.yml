@@ -1,3 +1,0 @@
-almot_platform_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: AlmotPlatformBundle:Default:index }
